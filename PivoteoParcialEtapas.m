@@ -2,22 +2,20 @@
 
 % ELIMINACION GAUSSIANA CON PIVOTEO PARCIAL (SOLUCION POR ETAPAS)
 
-clc  %permite borrar el area de trabajo
-clear  %permite borrar las variables almacenadas
-format long
+clc
+clear
 
-fprintf('                     ELIMINACION GAUSSIANA CON PIVOTEO PARCIAL (SOLUCION POR ETAPAS)\n\n\n');
-%fprintf me permite ingresar comentarios de manera textual que pueden
-%orientar al usuario en el uso del programa
 
-%input es un comando de solicitud de entrada de datos del usuario.
+fprintf('ELIMINACION GAUSSIANA CON PIVOTEO PARCIAL (SOLUCION POR ETAPAS)\n\n\n');
+
+
 A=input('Ingrese la matriz A = \n');
 b=input('\nIngrese el vector b, correspondite a los terminos independientes b=\n');
 % Las matrices A y b deben ser ingresadas entre corchetes separando las
 %columnas mediante coma ',' y las filas mediante punto y coma ';'.
 
-%permite obtener el tamaño de la matriz A
 [n,m]=size(A);
+%permite obtener el tamaÃ±o de la matriz A
 C=[A,b];
 % la matriz C, representa la forma de la matriz aumentada [Ab]
 
