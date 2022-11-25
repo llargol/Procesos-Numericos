@@ -1,20 +1,17 @@
 % ELIMINACION GAUSSIANA SIMPLE (SOLUCION POR ETAPAS)
 
-clc  %permite borrar el area de trabajo
-clear  %permite borrar las variables almacenadas
-format long %permite utilizar la maxima capacidad de la maquina
+clc 
+clear  
 
-fprintf('                     ELIMINACION GAUSSIANA SIMPLE (SOLUCIÓN POR ETAPAS)\n\n\n');
-%fprintf me permite ingresar comentarios de manera textual que pueden
-%orientar al usuario en el uso del programa
 
-%input es un comando de solicitud de entrada de datos del usuario.
+fprintf('ELIMINACION GAUSSIANA SIMPLE (SOLUCIÃ“N POR ETAPAS)\n\n\n');
+
 A=input('Ingrese la matriz A = \n');
 b=input('\nIngrese el vector b, correspondite a los terminos independientes b=\n');
 % Las matrices A y b deben ser ingresadas entre corchetes separando las
 %columnas mediante coma ',' y las filas mediante punto y coma ';'.
 
-%permite obtener el tamaño de la matriz A
+%permite obtener el tamaÃ±o de la matriz A
 [n,m]=size(A);
 C=[A,b];
 % la matriz C, representa la forma de la matriz aumentada [Ab]
@@ -51,7 +48,7 @@ if n==m
 else %funcion asignada del if, en caso de que este sea falso
     fprintf('\nERROR: La matriz NO es cuadrada\n');
 end
-fprintf('\n\n\nSOLUCIÓN:\n');
+fprintf('\n\n\nSOLUCIÃ“N:\n');
 fprintf('\n\nLa matriz Ab final:\n');
 disp(C)
 fprintf('\n\nLa solucion de X1 hasta Xn es:\n');
