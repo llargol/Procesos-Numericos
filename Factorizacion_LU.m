@@ -1,6 +1,6 @@
-%LU: Calcula la solución de un sistema de ecuaciones Ax=b 
-% mediante la factorización de A=LU ya sea sin pivoteo piv=0 
-% o usando pivoteo parcial piv=1. Donde A es de tamaño nxn y b de tamaño nx1
+% Calcula la solución de un sistema de ecuaciones Ax=b 
+% mediante la factorización de A=LU ya sea usando pivoteo parcial piv=1. Donde A es de tamaño nxn y b de tamaño nx1
+% o sea sin pivoteo piv=0 
 
 function [x, L, U] = LU(A,b,n,Piv)
 
