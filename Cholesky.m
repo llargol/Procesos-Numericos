@@ -1,14 +1,12 @@
 % FACTORIZACION lU CHOLESKY
 
-clc  %permite borrar el area de trabajo
-clear  %permite borrar las variables almacenadas
-format long %permite utilizar la maxima capacidad de la maquina
+clc  
+clear  
 
-fprintf('                     FACTORIZACION LU CHOLESKY\n\n\n');
-%fprintf me permite ingresar comentarios de manera textual que pueden
-%orientar al usuario en el uso del programa
 
-%input es un comando de solicitud de entrada de datos del usuario.
+fprintf('FACTORIZACION LU CHOLESKY\n\n\n');
+
+
 A=input('Ingrese la matriz A = \n');
 b=input('\nIngrese el vector b, correspondite a los terminos independientes b=\n');
 % Las matrices A y b deben ser ingresadas entre corchetes separando las
@@ -20,8 +18,8 @@ C=[A,b];
 disp(C)
 if n==m    
     for k=1:n
-      %La instrucción iterativa for permite repetir estamentos a un
-      %numero específico de veces  
+      %La instrucciÃ³n iterativa for permite repetir estamentos a un
+      %numero especÃ­fico de veces  
         suma1=0;
         for p=1:k-1
             suma1=suma1+L(k,p)*u(p,k);
