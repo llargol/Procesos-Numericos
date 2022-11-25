@@ -1,26 +1,23 @@
-%Este programa halla la soluci髇 al sistema Ax=b y la factorizaci髇 LU de A
-%usando el m閠odo de Doolittle
+%Este programa halla la soluci贸n al sistema Ax=b y la factorizaci贸n LU de A
+%usando el m茅todo de Doolittle
 
 %Entradas: 
 %A, matrix invertible
 %b, vector constante
 
 %Salidas
-%x, soluci髇
-%L, matriz L de la factorizaci髇
-%U, matriz U de la factorizaci髇
-
-%Creado por: Samir Posada
-%鷏tima actualizaci髇: 16/07/2020
+%x, soluci贸n
+%L, matriz L de la factorizaci贸n
+%U, matriz U de la factorizaci贸n
 
 function [x,L,U]=C14_Doolittle(A,b)
 
-%Inicializaci髇
+%Inicializaci贸n
 n=size(A,1);
 L=eye(n); 
 U=eye(n);
 
-%Factorizaci髇
+%Factorizaci贸n
 for i=1:n-1
     for j=i:n
         U(i,j)=A(i,j)-dot(L(i,1:i-1),U(1:i-1,j)');
@@ -31,7 +28,7 @@ for i=1:n-1
 end
 U(n,n)=A(n,n)-dot(L(n,1:n-1),U(1:n-1,n)');
 
-%Entrega de resultados
+%Resultados
 z=sustprgr([L b]);
 x=sustregr([U z]);     
 end
